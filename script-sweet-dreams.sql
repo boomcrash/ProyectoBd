@@ -26,4 +26,5 @@ create table matriz(
     foreign key (empresa_id) references empresa(empresa_id)
 );
 
+select 
 
