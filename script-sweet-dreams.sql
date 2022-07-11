@@ -28,7 +28,9 @@ create table matriz(
 select * from empresa;
 Select * from matriz;
 
+
 create table cliente(
 	cliente_id int
 );
+select * from empresa;
 
