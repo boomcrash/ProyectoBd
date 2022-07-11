@@ -25,6 +25,7 @@ create table matriz(
     empresa_id int(11),
     foreign key (empresa_id) references empresa(empresa_id)
 );
+select * from empresa;
 Select * from matriz;
 
 create table cliente(
