@@ -16,6 +16,7 @@ create table empresa(
     fecha_registro date,
     estado varchar(1)
 );
+
 create table matriz(
 	matriz_id int(11) not null auto_increment PRIMARY KEY,
 	nombre varchar(50),
@@ -27,4 +28,29 @@ create table matriz(
 );
 Select * from matriz;
 
+create table confort(
+	confort_id int(11) not null auto_increment PRIMARY KEY
+);
+
+create table medidas(
+	medidas_id int(11) not null auto_increment PRIMARY KEY
+);
+
+create table colchon(
+	colchon_id int(11) not null auto_increment PRIMARY KEY,
+	confort_id int(11),
+    medidas_id int (11),
+    producto_id int (11),
+	foreign key (confort_id) references confort(confort_id),
+    foreign key (medidas_id) references medidas(medidas_id),
+    foreign key (producto_id) references producto(producto_id)
+);
+
+create table producto(
+	producto_id int(11) not null auto_increment PRIMARY KEY,
+	nombre varchar(50),
+    descripcion varchar(50),
+    fecha_registro date,
+    estado varchar(1)
+);
 
