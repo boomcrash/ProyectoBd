@@ -142,6 +142,7 @@ create table producto_has_medida(
     proveedor_id int(11),
     foreign key (categoria_id) references categoria(categoria_id),
     foreign key (proveedor_id) references proveedor(proveedor_id)
+	-
 );*/
 
 
