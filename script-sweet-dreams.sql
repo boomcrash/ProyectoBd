@@ -28,8 +28,8 @@ create table empresa_detalle(
 );
 /* Aqui estaran todas las sucursales de la empresa*/
 /*MAESTRA*/
-create table matriz(
-	matriz_id int(11) not null auto_increment PRIMARY KEY,
+create table negocio(
+	negocio_id int(11) not null auto_increment PRIMARY KEY,
 	nombre varchar(50),
     pais varchar(50),
     canton varchar(50),
@@ -37,8 +37,10 @@ create table matriz(
     direccion varchar(50),
     fecha_registro date,
 	estado varchar(1) check (estado ='A' or estado='I'),
+    sucursal_id int(11),
     empresa_id int(11),
-	foreign key (empresa_id) references empresa(empresa_id)
+	foreign key (empresa_id) references empresa(empresa_id),
+    foreign key (sucursal_id) references negocio(negocio_id)
 );
 /* Aqui estaran cada medida para un producto*/
 /*MAESTRA*/
