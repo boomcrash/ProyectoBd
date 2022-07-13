@@ -172,15 +172,6 @@ create table valoracion(
     foreign key (producto_id) 	references producto(producto_id)
 );
 
-create table pago(
-	pago_id 				int(11) not null auto_increment primary key,
-    nro_transaccion 		varchar(20),
-    fecha_registro 			date,
-    total 					float,
-    metodo_pago 			enum('EFECTIVO','DEBITO','CREDITO'),
-	estado varchar(1) check (estado ='A' or estado='I')
-);
-
 create table industria(
 	industria_id 			int(11) not null auto_increment primary key,
 	nombre 					varchar(50),
@@ -188,32 +179,17 @@ create table industria(
     estado 					varchar(1)
 );
 
-create table tipo_tarjeta(
-	tipo_tarjeta_id 		int(11) not null auto_increment primary key,
-	nombre 					varchar(50),
-    fecha_registro 			date,
-    estado 					varchar(1)
-);
-
-create table tarjeta(
-	tarjeta_id 				int(11) not null auto_increment primary key,
-    tipo_tarjeta			int(10),
-	cuotas_pago 			int(11) check (cuotas_pago >0 or cuotas_pago<12),
-    pago_id 				int(11),
+create table tipo_pago(
+	tipo_pago_id 			int(11) not null auto_increment primary key,
     industria_id 			int(11),
-    foreign key (pago_id) 		references pago(pago_id),
-	foreign key (tipo_tarjeta) 	references tipo_tarjeta(tipo_tarjeta_id),
-    foreign key (industria_id) 	references industria(industria_id)
+	tipo_pago 				enum('EFECTIVO','DEBITO','CREDITO'),
+    fecha_registro 			date,
+    cuotas_pago 			int(11) check (cuotas_pago >0 or cuotas_pago<12),
+    estado 					varchar(1),
+	foreign key (industria_id) 	references industria(industria_id)
 );
 
-create table efectivo(
-	efectivo_id 			int(11) not null auto_increment primary key,
-	cuotas_pago 			int(11) check (cuotas_pago=1),
-    pago_id 				int(11),
-    foreign key (pago_id) 	references pago(pago_id)
-);
-
-create table orden_cabecera(
+create table orden_cab(
 	orden_id 				int(11) not null auto_increment primary key,
     fecha_registro 			date,
     estado 					varchar(1) check (estado ='A' or estado='I'),
@@ -221,47 +197,49 @@ create table orden_cabecera(
     foreign key (cliente_id) references cliente(cliente_id)
 );
 
-create table orden_detalle(
+create table orden_det_producto(
 	orden_detalle_id 		int(11) not null auto_increment primary key,
-	cantidad 				int(11),
-    precio 					float,
     orden_id 				int(11),
-	producto_id 			int(11),
-	foreign key (orden_id) 		references orden_cabecera(orden_id),
+    producto_id 			int(11),
+	cantidad 				int(11),
+    precio 					float,	
+	foreign key (orden_id) 		references orden_cab(orden_id),
     foreign key (producto_id) 	references producto(producto_id)
 );
 
-create table costo_entrega(
-	costo_entrega_id 		int(11) not null auto_increment primary key,
-    codigo_postal 			varchar(5),
-    ciudad 					varchar(20),
-    parroquia 				varchar(20),
-    precio 					float,
-    fecha_registro 			date,
-    estado varchar(1) check (estado ='A' or estado='I')
-);
-
-create table entrega_domiclio(
-	entrega_domiclio_id 	int(11) not null auto_increment primary key,
-    direccion_entrega 		varchar(50),
-    fecha_registro 			date,
-    estado 					varchar(1) check (estado ='A' or estado='I'),
-    costo_entrega_id 		int(11),
-	foreign key (costo_entrega_id) references costo_entrega(costo_entrega_id)
-);
-
-create table factura(
+create table factura_cab(
 	factura_id 				int(11) not null auto_increment primary key,
 	orden_id 				int(11) ,
 	nro_comprobante 		varchar(50),
+    foreign key (orden_id) 	references orden_cab(orden_id)
+);
+
+create table factura_det_prod(
+	factura_det_prod_id 	int(11) not null auto_increment primary key,
+	factura_id 				int(11),
     iva 					float,
     descuento 				float,
     precio_total 			float,
     estado 					varchar(1) check (estado ='A' or estado='I'),
-	pago_id 				int(11),
-	foreign key (pago_id) 	references pago(pago_id),
-    foreign key (orden_id) 	references orden_cabecera(orden_id)
+    foreign key (factura_id) 	references factura_cab(factura_id)
 );
+
+
+create table factura_det_pago(	
+	pago_id 				int(11) not null auto_increment primary key,
+    factura_id				int(11),
+    tipo_pago_id			int(11),
+    nro_transaccion 		varchar(20),
+    fecha_registro 			date,
+    total 					float,    
+	estado varchar(1) check (estado ='A' or estado='I'),    
+    foreign key (factura_id) 		references factura_cab(factura_id),
+	foreign key (tipo_pago_id) 		references tipo_pago(tipo_pago_id)
+);
+
+
+
+
 
 
 
