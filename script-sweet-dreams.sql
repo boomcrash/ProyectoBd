@@ -188,13 +188,33 @@ create table tipo_pago(
     estado 					varchar(1),
 	foreign key (industria_id) 	references industria(industria_id)
 );
+create table costo_entrega(
+	costo_entrega_id int(11) not null auto_increment PRIMARY KEY,
+    codigo_postal varchar(5),
+    ciudad varchar(20),
+    parroquia varchar(20),
+    precio float,
+    fecha_registro date,
+    estado varchar(1) check (estado ='A' or estado='I')
+);
+
+create table entrega_domiclio(
+	entrega_domiclio_id int(11) not null auto_increment PRIMARY KEY,
+    direccion_entrega varchar(50),
+    fecha_registro date,
+    estado varchar(1) check (estado ='A' or estado='I'),
+    costo_entrega_id int(11),
+	foreign key (costo_entrega_id) references costo_entrega(costo_entrega_id)
+);
 
 create table orden_cab(
 	orden_id 				int(11) not null auto_increment primary key,
     fecha_registro 			date,
     estado 					varchar(1) check (estado ='A' or estado='I'),
-	cliente_id 				int(11),
-    foreign key (cliente_id) references cliente(cliente_id)
+	cliente_id 				int(11) not null,
+    entrega_domiclio_id		int(11),
+    foreign key (cliente_id) 			references cliente(cliente_id),    
+	foreign key (entrega_domiclio_id) 	references entrega_domiclio(entrega_domiclio_id)    
 );
 
 create table orden_det_producto(
@@ -211,19 +231,11 @@ create table factura_cab(
 	factura_id 				int(11) not null auto_increment primary key,
 	orden_id 				int(11) ,
 	nro_comprobante 		varchar(50),
-    foreign key (orden_id) 	references orden_cab(orden_id)
+    entrega_domiclio_id		int(11),
+    fecha_registro 			date,
+    estado 					varchar(20),
+    foreign key (orden_id) 				references orden_cab(orden_id)
 );
-
-create table factura_det_prod(
-	factura_det_prod_id 	int(11) not null auto_increment primary key,
-	factura_id 				int(11),
-    iva 					float,
-    descuento 				float,
-    precio_total 			float,
-    estado 					varchar(1) check (estado ='A' or estado='I'),
-    foreign key (factura_id) 	references factura_cab(factura_id)
-);
-
 
 create table factura_det_pago(	
 	pago_id 				int(11) not null auto_increment primary key,
@@ -232,15 +244,21 @@ create table factura_det_pago(
     nro_transaccion 		varchar(20),
     fecha_registro 			date,
     total 					float,    
-	estado varchar(1) check (estado ='A' or estado='I'),    
-    foreign key (factura_id) 		references factura_cab(factura_id),
+	estado varchar(1) check (estado ='A' or estado='I'),
 	foreign key (tipo_pago_id) 		references tipo_pago(tipo_pago_id)
 );
 
-
-
-
-
+create table factura_detalle(
+	factura_detalle 	int(11) not null auto_increment primary key,
+	factura_id 				int(11),
+    pago_id 				int(11),
+    iva 					float,
+    descuento 				float,
+    precio_total 			float,
+    estado 					varchar(1) check (estado ='A' or estado='I'),
+    foreign key (factura_id) 	references 	factura_cab(factura_id),
+    FOREIGN KEY (pago_id) 		REFERENCES factura_det_pago(pago_id) ON DELETE RESTRICT
+);
 
 
 
