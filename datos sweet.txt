@@ -1,0 +1,194 @@
+INSERT INTO cliente(cliente_id, nombre, sexo, telefono, direccion_domicilio, cedula, fecha_registro, estado) VALUES
+(1, '7782C8B87X1465AOEX9BT4SCUB3L183', 'M', NULL, '1ZP9U3B3F1RQJI', '4375733847', '2003-09-14', 'A'),
+(2, 'RVH4', 'M', NULL, 'FK', '2324803317', '2003-09-14', 'A'),
+(3, 'S728N9C8Q051MC7NKH', 'M', NULL, '8X093O5A829B073L629L', '5546465584', '2003-09-14', 'I'),
+(4, 'QLQV0U43GV82IUATN3NYNB1J842NH3VM9EZI41K362YHCZ9W09', 'M', NULL, NULL, '3854988873', '2003-09-14', 'A'),
+(5, '95RJ30IP641E7RTR06BS2KY', 'M', '4JTZ768', '3W63C26G8ZY3', '6758649858', '2003-09-14','A'),
+(6, '615NNG40D0D7', 'F', '0V79DT3T6IDJVR6K5VITG9172L9', '69VZ66VZSF0012P5MI037QUJ16N679N42QI98LYA9F7E0M8441', '0021608394','2003-09-14', 'A'),
+(7, 'KB3MW1', 'F', '0A1UZJ72', '618I009639425', '8240474332', '2003-09-14','A'),
+(8, 'EF897LN7YI2452P541O', 'F', '54E9H52', 'ORV707D43', '2612357133', '2003-09-14','A'),
+(9, '3FO4423VHZP9YU39YN', 'F', '83S4PV2MVB167A02184EMA9C75QXIS11E', 'JM', '3892817618', '2003-09-14','A');
+
+INSERT INTO categoria(categoria_id, nombre_categoria, fecha_registro, estado) VALUES
+(1, '00A848KWU', '1971-03-09', 'A'),
+(2, 'Q74', '1978-05-11', 'A'),
+(3, 'T', '2009-09-07', 'A'),
+(4, '3NO40JEX3LQ8', '1976-05-28', 'A'),
+(5, 'SI15W4575I527TR7', '1978-08-07', 'A'),
+(6, 'D80X', '2001-09-08', 'A'),
+(7, 'E9DL', '2002-09-02', 'A'),
+(8, '2Q507C026274Y7E8W7RHCC5M970G3P', '1991-01-28', 'A'),
+(9, 'JQO10XA4X306P44GU1J34HN4N3USVDCUE720Y0KCZD65Y4N545', '1970-03-05', 'A');
+
+INSERT INTO costo_entrega(costo_entrega_id, codigo_postal, ciudad, parroquia, precio, fecha_registro, estado) VALUES
+(1, 'Q0', '8', '7', 100, '1970-01-02', 'A'),
+(2, 'V', '1K270', 'UF', 100, '2003-09-14', 'A'),
+(3, '6M', '8', '5', 100, '2001-01-30', 'A'),
+(4, 'SU', '0V', 'D', 100, '1986-06-18', 'A'),
+(5, 'G', 'OK80', '851D', 100, '1970-01-04', 'A'),
+(6, '9S', 'V', 'K746K', 100, '2004-06-13', 'A'),
+(7, 'MM', 'Q9IP', 'N', 100, '1997-05-29', 'A'),
+(8, '8AS', 'A1W', 'P', 100, '1997-05-29', 'A'),
+(9, '68', 'HF157', 'DJN74QR3', 100, '1986-06-04', 'A'),
+(10, 'WF', 'HF157', 'DJN74QR3', 100, '1980-10-18', 'A');
+
+INSERT INTO empresa(empresa_id, nombre, ruc) VALUES
+(1, '0P09Z3X5', '6522190723429'),
+(2, '0', '7277230840312'),
+(3, 'TY6H2K0H3Z4W4I7EM000C', '8583288998751'),
+(4, '46C9C0CJ8MNU94TO16', '6873206270293'),
+(5, '8', '7927584407291'),
+(6, 'EWDMWP5TL8GTXYZHQ17374W8HKYNK6QY5X8CF9AWM8Z42UI13Z', '6733285946209'),
+(7, '7ALV681', '3895841482828'),
+(8, 'I67G921JE0279EOJ88B4M0', '6234495925367');
+
+INSERT INTO Banco(banco_id, nombre, fecha_registro, estado) VALUES
+(1, '7P179', '1991-03-30', 'A'),
+(2, '9GF7644A', '1992-03-13', 'A'),
+(3, 'GE9', '1970-12-26', 'A'),
+(4, '8V59308J6J01Y2T7E', '2004-03-01', 'A'),
+(5, 'H4C', '1989-08-16', 'A'),
+(6, '35LN9', '1970-04-10', 'A'),
+(7, 'FX8796', '1990-09-02', 'A'),
+(8, '04984H9KP1JWI7Z7389SZTGSM793C593TKJXS00V804GR', '1970-01-05', 'A'),
+(9, 'T9Q3ADST464MT65LE7JY606ROC2', '1999-02-15', 'A');
+
+INSERT INTO proveedor(proveedor_id, nombre, direccion, telefono, fecha_registro, estado) VALUES
+(1, '3B5', '90BP6FP353J3FYAJTYPLS9174245W9XY392', '8WVPO7P08M91Q82G02RL9XD8THE2W247Z0N6U5B804C', '1970-01-25', 'A'),
+(2, 'YB5T4958P6L11', 'X67BT', '1111022G83J60B81C4PJ20AL72LKUK855970L3V3BGH4', '2015-11-18', 'A'),
+(3, 'WC5D0', '64G7105', '4J64K3N0F0V477I7M11N5AK0', '2001-05-08', 'A'),
+(4, 'E4D', '525PN', 'E628RZT49CII17JOAF23JW180ET20PPST3T8694MG0CSNW0X6G', '2019-05-04', 'A'),
+(5, 'LEM6AG76C9RWK', '47W9C2ON66', '384P34J027X0WS99AACO3190X6I954NYA2H2U4BA', '1985-03-15', 'A'),
+(6, 'KAT6RN95P98I4V92716', '7Q292', '2M339G2W8XO679YH99QXFEHY8PIA5729611906OC2P54MM54GP', '1970-03-31', 'A'),
+(7, 'MC40570KEG1S689Y78789', 'JBFK5WWH0LN9XQ9R6ILFYWBR7136CQ6A197R', 'P804VU3K43M1C155R92W7H2037L43ZW97', '1970-03-29', 'A'),
+(8, 'UV', '7ZAJKLR9C5D16', '81B28F97P7DXDV6XNQ7469XC3Z629', '1970-01-09', 'A');
+
+INSERT INTO tipo(tipo_id, tipo, fecha_registro, estado) VALUES
+(1, '9DX2Y7W5VL403PQ9SGVST0357C8WUWTQC303R8RN', '1970-01-08', 'A'),
+(2, '7', '2007-05-30', 'A'),
+(3, 'NO7K00750S1SWUSWH21U9CZXK94V58Z7RM93163XHSG047G637', '1970-02-05', 'A'),
+(4, '21616522U5GP3LY0180E67UW52EFBWZ1225LVHNA0', '2004-09-14', 'A'),
+(5, '7TRXTF0033W047Z', '2014-08-23', 'A'),
+(6, 'V79', '1993-03-08', 'A'),
+(7, 'H56', '2003-02-26', 'A'),
+(8, '989B2', '2011-11-01', 'A'),
+(9, 'E8659D10PU87SNSO3', '2002-12-24', 'A');
+
+INSERT INTO producto(producto_id, nombre, stock, garantia, empresa_id) VALUES
+(1, '4032O399I6M43CG876V6', 8, 10, 4),
+(2, 'T0Q', 8, 10, 8),
+(3, 'I5FJON6XG3BE1UH5SRR279KGJQJINKX86DOGVH95R06I972IMO', 6, NULL, 3),
+(4, '81LK8O3Y5LY2Z', 1, 5, 8),
+(5, '8AH3EL51P52', 3, 9, 6),
+(6, 'HTBNI8V', 3, 1, 6),
+(7, 'V9U3B8', 1, 2, 2),
+(8, 'MOJ2YR5', 7, 0, 7);
+
+INSERT INTO entrega_domiclio(entrega_domiclio_id, direccion_entrega, fecha_registro, estado, costo_entrega_id) VALUES
+(1, 'J7O4SDQ909KH24A9SH2N7OMS8T173', '1974-06-26', 'A', 5),
+(2, '7MHVQG4229L3Z8B', '1971-11-23', 'A', 6),
+(3, 'WM29QV', '1990-07-07', 'A', 4),
+(4, '2Q4WO93RVU5', '1986-05-22', 'A', 8),
+(5, 'Q1G7355TEP3B6XC3D6PA844LPCUQMX5RC', '1990-04-23', 'A', 1),
+(6, '5MW0Q016KLEJ35JWSI308U0', '1992-05-30', 'A', 10),
+(7, 'R7ZI3P16857QFMK422XV0K9GC', '2022-04-09', 'A', 3),
+(8, '2640Y1C9S73628WGH2', '1970-01-09', 'A', 9),
+(9, '98', '1991-11-20', 'A', 8),
+(10, '98', '1991-11-20', 'A', 10);
+
+INSERT INTO orden_cab(orden_id, fecha_registro, estado, cliente_id, entrega_domiclio_id) VALUES
+(1, '1986-07-05', 'A', 2, 9),
+(2, '1986-07-05', 'A', 7, 4),
+(3, '1973-02-27', 'A', 5, 4),
+(4, '2017-05-12', 'A', 4, 5),
+(5, '1975-01-18', 'A', 7, NULL),
+(6, '1989-02-10', 'A', 5, 7),
+(7, '2013-02-04', 'A', 1, 6),
+(8, '1973-09-21', 'A', 1, 5),
+(9, '1993-12-25', 'A', 4, 3),
+(10, '2022-05-24', 'A', 2, 8);
+
+INSERT INTO factura_cab(factura_id, orden_id, nro_comprobante, entrega_domiclio_id, fecha_registro, estado) VALUES
+(1, 1, '1JAES702AS', 1, '1994-12-21', 'A'),
+(2, 4, 'CE30K', 2, '1995-10-17', 'A'),
+(3, 9, '51', 3, '2011-03-17', 'A'),
+(4, 8, 'X667OW002WJ0', 4, '1970-03-12', 'A'),
+(5, 6, 'QYBI0QP302403895PTNA9H4437OHVK62WW1H84TSU2', 5, '1984-12-13', 'A'),
+(6, 10, 'TQ12G51URHP85081OBA47633DMXN950BCF5F61F8YV62526Z70', 6, '2015-06-19', 'A'),
+(7, 3, '5', 7, '1992-01-21', 'A'),
+(8, 5, 'H049TZZT8VHF9', 8, '1989-08-01', 'A'),
+(9, 2, 'H6NB', 9, '1988-06-23', 'A'),
+(10, 7, '894851548', 10, '1988-06-23', 'A');
+
+INSERT INTO empresa_detalle(empresa_detalle_id, razon_social, actividad_economica, tipo_contribuyente, subtipo_contribuyente, clase_contribuyente, contabilidad, fecha_inicio, fecha_actualizacion, fecha_cese, agente_retencion, fecha_registro, estado, empresa_id) VALUES
+(1, 'N', '55294', 'sociedad', 4, 'especial', 'no', '1995-10-18', '1986-06-15', '2016-04-13', 'si', '1970-01-01', 'A', 1),
+(2, 'P3P3CBSGG91X8IX3HT0KT493R5H2F75197F6OXZOX1M8932BQ5', '32386', 'sociedad', 0, 'especial', 'no', '1970-11-16', '2001-08-29', '2013-10-13', 'no', '1976-08-08', 'A', 2),
+(3, '44JW1X82', '73850', 'sociedad', 0, 'rise', 'si', '1990-01-01', '2011-05-28', '1970-01-07', 'no', '2007-01-16', 'A', 3),
+(4, '9', '58499', 'natural', 7, NULL, 'no', '1970-02-16', NULL, '2021-09-16', 'no', '1991-07-05', 'A', 4),
+(5, '331311', '37389', 'sociedad', 0, 'rise', 'no', '1970-04-04', '2002-11-05', '2007-11-04', 'si', '2009-12-03', 'A', 5),
+(6, '7BFZ8SO8810Q57', '12429', 'sociedad', 6, 'rise', 'si', '1996-04-20', '1973-07-17', '1974-03-28', 'si', '1995-08-03', 'A', 6),
+(7, 'E4RI5WY', '46167', 'sociedad', 5, 'rise', 'no', '1970-01-09', '1996-03-18', '1972-03-12', 'no', '2014-04-20', 'A', 7),
+(8, '5E3', '97909', 'sociedad', 4, 'otros', 'no', '1970-02-08', '1996-08-05', '2002-12-18', 'no', '1970-01-06', 'A', 8);
+
+INSERT INTO negocio(negocio_id, ruc, nombre, pais, canton, ciudad, direccion, fecha_registro, estado, sucursal_id, empresa_id) VALUES
+ (1, '1LA67WQ8S5AD6', 'DONPEPO', NULL, '6U5J56828J1N', NULL, 'UC4GR662312XE4H5MBD', '1970-09-29', 'A', NULL, 1),
+(2, '6KCA6E99QW841', '86C1DIREBKHR9J2O7782GY335257QI57GD993674R6XEL8N337', 'O2GFA35WZ6CATNPD', NULL, '177IG770LI09TT456K2', 'U923644WLL3QE56WYBJB584BC5W4EZSKS860K', '1970-01-02', 'A', NULL, 2),
+(3, 'PRPOAMSUQLOWP', 'POKRU4H4T5', '5AF', '6BY3', '0LC6M31Z8M42UCMM1CEJA673Y37SD7', '0A94X0AF1HDD0ZL0288W40G42391BE707ML99KDMA', '1997-07-17', 'A', NULL, 3),
+(4, '5QOEPWNAMWQOS', 'WM', 'T3IMI1', 'J5H50RN4MWVS4D21J', '1Q0ZZN', '3643X9JDY68331742', '1970-11-18', 'A', NULL, 4),
+(5, 'OH0WR678QERRW', 'H18CN28354887IY10', 'D12BXN', '5L711W42T0612O3U089ZNJ2F', '75SHED42S2DPQADMNP864', 'J541697', '1970-03-15', 'A', 1, 1),
+(6, '5456D5DF698N0', 'L9YB', '3QQ18NB91ITL', '859J', '7T5O3WE1J7', 'CE224YUB1RR898UGO6B6X1P5JIXTG9X7', '1990-10-21', 'A', 2, 1),
+(7, 'JHR1P1SDMSDFI', '67A2Z20626I6YCNHJ61T39N1R5PS968TV18TG488191869G6A6', 'UD4MH5399085562694SR1', 'P5KCH088', 'L', 'Q6B57CS89D7M60NS539W', '1977-08-10', 'A', 2, 2),
+(8, '9A4SDWEORPWEI', 'VF6YOM3920837TP9F0N4MN96859', 'P399DYX0J1H45', 'WO28CN1HD9M0ZYY', 'D4VHJAQ4T3R62DW9H19IS13', 'NZPFPMS7M15D24XV6WFVQ7', '1996-06-06', 'A', 3, 3),
+(9, '83S0AGVPFKGSP', 'VRHK0KU3059J9JD460K5N0FRKWUY4DB', 'R29WM949696959ST7JA72', 'R0E1', '2A8', '0FLR7K69KRP62943A6I203', '1996-06-06', 'A', 4, 4),
+(10,'Q4VH9BZWEOWEJ', 'Q849MGGP8YKGL0S66C6V9P8UCRG11F', 'GCPMBJ', '83741LXMIK53F3V8CP', '3Z7FAAV5YG43LQ43LJP', NULL, '1989-07-20', 'A', NULL, 5);
+
+INSERT INTO clasificacion(clasificacion_id, nombre_clasificacion, fecha_registro, estado) VALUES
+(1, 'JK1E7UKX', '1992-09-11', 'A'),
+(2, 'QWEIOQWE', '2002-02-19', 'A'),
+(3, 'I020499C3L1XC', '2002-02-19', 'A'),
+(4, 'DT3589R8A', '1983-01-15', 'A'),
+(5, '3Q683084', '2011-04-30', 'A'),
+(6, '6YQV498J6', '2013-10-31', 'A'),
+(7, 'UH', '2009-07-22', 'A'),
+(8, 'K9W61M31M43A80W2K7', '1973-07-30', 'A'),
+(9, '42SJG15W8I1ZC4DTB', '2020-04-03', 'A'),
+(10, 'XBB720206WQ', '1992-09-14', 'A');
+
+INSERT INTO medida(medida_id, plaza, ancho, alto, profundidad, fecha_registro, estado) VALUES
+(1, 1, 3, 1, 1, '2017-01-03', 'A'),
+(2, 2, 4, 1, 2, '1970-03-05', 'A'),
+(3, 2, 5, 2, 3, '1977-02-05', 'A'),
+(4, 0, 4, 2, 4, '1996-04-19', 'A'),
+(5, 4, 1, 2, 5, '1984-01-14', 'A'),
+(6, 4, 0, 1, 1, '1981-04-30', 'A'),
+(7, 2, 0, 4, 2, '1976-02-21', 'A'),
+(8, 2, 0, 1, 3, '1976-02-20', 'A'),
+(9, 0, 3, 2, 4, '1971-06-30', 'A');
+
+INSERT INTO tipo_pago(tipo_pago_id, tipo_pago, fecha_registro, cuotas_pago, estado) VALUES
+(1, 'EFECTIVO', '1999-12-06', 3, 'A'),
+(2, 'DEBITO', '2006-12-11', 8, 'A'),
+(3, 'CREDITO', '2011-08-09', 3, 'A');
+
+INSERT INTO precio(precio_id, precio_normal, descuento_web, descuento_especial, fecha_registro, estado) VALUES
+(1, 50, NULL, NULL, '2017-09-25', 'A'),
+(2, 10, NULL, NULL, '2007-09-15', 'A'),
+(3, 14, NULL, NULL, '1990-03-25', 'A'),
+(4, 20, NULL, NULL, '1970-01-05', 'A'),
+(5, 40, NULL, NULL, '1996-06-12', 'A'),
+(6, 55, NULL, NULL, '1975-03-29', 'A'),
+(7, 24, NULL, NULL, '2008-09-15', 'A'),
+(8, 90, NULL, NULL, '1984-02-22', 'A'),
+(9, 75, NULL, NULL, '2005-04-04', 'A'),
+(10, 158, NULL, NULL, '2005-04-04', 'A');
+
+INSERT INTO producto_detalle(producto_detalle_id, color, nivel_soporte, fecha_registro, estado, precio_id, proveedor_id, tipo_id, categoria_id, clasificacion_id, producto_id) VALUES
+(1, NULL, NULL, '2008-07-18', 'A', 1, 7, 4, 6, 9, 1),
+(2, 'PhthaloGreen', 7, '2008-07-18', 'A', 3, 8, NULL, 2, 1, 2),
+(3, NULL, 3, '2011-08-03', 'A', 2, 1, 6, 4, 5, 3),
+(4, 'Shadow', 6, '1970-01-07', 'A', 4, 1, 4, 3, 4, 4),
+(5, 'DarkJungleGreen', 4, '2014-02-23', 'A', 5, 1, 8, 8, 5, 5),
+(6, NULL, 8, '1988-03-13', 'A', 6, 5, 1, 9, NULL, 6),
+(7, 'ZinnwalditeBrown', 1, '1978-12-17', 'A', 7, 2, 3, 8, 1, 7),
+(8, 'ElectricYellow', 2, '1971-03-29', 'A', 8, 7, 8, 9, 6, 8);
+
